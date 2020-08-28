@@ -6,7 +6,7 @@ class Client
     uuid
 }
 
-var valid_keys = ['B17E5A3E-BE7C-4CD8-9772-2CD957B43A5A']
+var valid_keys = ['B17E5A3E-BE7C-4CD8-9772-2CD957B43A5A', '0CB4BF2F']
 
 function get_time()
 {
