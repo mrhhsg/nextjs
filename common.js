@@ -18,6 +18,7 @@ var clients = []
 var c = new Client
 c.ip = '2.2.2.2'
 c.lasted_reported = get_time()
+c.uuid = '0CB4BF2F'
 clients.push( c ) 
 console.log( clients)
 
