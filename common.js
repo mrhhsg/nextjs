@@ -28,12 +28,17 @@ function report(uuid, ip)
     if ( !client )
     {
         client = new Client;
+        client.ip = ip
+        client.uuid = uuid
+        client.lasted_reported = Date().substring(0, 24)
         clients.push(client)
     }
-
-    client.ip = ip
-    client.uuid = uuid
-    client.lasted_reported = Date().substring(0, 24)
+    else
+    {
+        client.ip = ip
+        client.uuid = uuid
+        client.lasted_reported = Date().substring(0, 24)
+    }
 
     return true
 }
