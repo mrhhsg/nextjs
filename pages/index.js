@@ -1,7 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+var ips = []
+// This gets called on every request
+export async function getServerSideProps() {
+  return { props: { clients: ips } }
+}
+
+export default function Home( params ) {
+  console.log(params)
   return (
     <div className={styles.container}>
       <Head>
@@ -34,7 +41,7 @@ export default function Home() {
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
+            <h3>Examples &rarr;</h3> {params.clients.length}
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
