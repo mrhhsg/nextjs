@@ -8,7 +8,19 @@ class Client
 
 var valid_keys = ['B17E5A3E-BE7C-4CD8-9772-2CD957B43A5A']
 
-var clients = [Client]
+function get_time()
+{
+    return Date().substring(0, 24)
+}
+
+var clients = []
+
+var c = new Client
+c.ip = '2.2.2.2'
+c.lasted_reported = get_time()
+clients.push( c ) 
+console.log( clients)
+
 
 function report(uuid, ip)
 {
