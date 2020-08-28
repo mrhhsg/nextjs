@@ -1,4 +1,4 @@
-const dump = require('../../common').dump
+const clients = require('../../common').clients
 
 export default( req, res ) => {
     var key = req.query['key']
@@ -9,7 +9,6 @@ export default( req, res ) => {
         return
     }
 
-    var clients = dump()
     var client = clients.find( (value, index, all) => {
         if ( value.uuid == key )
         {
