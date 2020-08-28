@@ -1,4 +1,5 @@
 const clients = require('../../common').clients
+const get_time = require('../../common').get_time
 
 export default( req, res ) => {
     var key = req.query['key']
@@ -18,7 +19,7 @@ export default( req, res ) => {
     if ( client )
     {
         res.statusCode = 200
-        res.json( client )
+        res.json( { client: client, time: get_time() } )
     }
     else
     {

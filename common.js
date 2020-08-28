@@ -61,5 +61,5 @@ function dump()
 }
 
 export {
-    report, dump, clients
+    report, dump, clients, get_time
 }
