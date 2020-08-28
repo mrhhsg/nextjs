@@ -1,4 +1,4 @@
-const clients = require('../../common').clients
+var clients = require('../../common').clients
 const get_time = require('../../common').get_time
 
 export default( req, res ) => {
