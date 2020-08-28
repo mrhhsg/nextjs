@@ -61,5 +61,5 @@ function dump()
 }
 
 export {
-    report, dump
+    report, dump, clients
 }
