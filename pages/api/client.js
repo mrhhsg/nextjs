@@ -18,7 +18,12 @@ export default async (req, res) => {
         return
     }
 
-    const ip = req.connection.remoteAddress.replace('::ffff:', '')
+    // const ip = req.connection.remoteAddress.replace('::ffff:', '')
+    var ip = req.headers['x-forwarded-for']
+    if ( !ip )
+    {
+        ip = req.connection.remoteAddress.replace('::ffff:', '')
+    }
 
     const data = (await database.ref().once('value')).val()
     var clients = data && data.clients && data.clients.length > 0 ? JSON.parse( data.clients ) : []
