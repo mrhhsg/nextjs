@@ -61,5 +61,5 @@ export default async (req, res) => {
     database.ref().set( {clients: str })
 
     res.statusCode = 200
-    res.json( req.connection.remoteAddress.replace('::ffff:', '') )
+    res.json( 'ok' )
 }
