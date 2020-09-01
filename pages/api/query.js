@@ -28,13 +28,12 @@ export default async (req, res) => {
             if ( client.uuid == key )
             {
                 res.statusCode = 200
-                res.json( client )
+                res.json( { IP: client.ip, "Last Reported": client.lasted_reported } )
                 return
             }
         }
     }
 
-    console.log( key + ' not found')
     res.statusCode = 404
     res.json( 'not found' )
 }
