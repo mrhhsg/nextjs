@@ -11,7 +11,7 @@ var auth_key = process.env.AUTH_KEY
 
 function get_time()
 {
-    return new Date().toLocaleString('zh', {
+    return new Date().toLocaleString('zh-CN', {
         timeZone: 'Asia/Shanghai'
     })
 }
